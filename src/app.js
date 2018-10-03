@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import TodoList from './components/TodoList';
 import TodoAdd from './components/TodoAdd';
+import classNames from 'classnames';
+
+import '../css/style.css';
 
 const todos = [
     {
@@ -29,12 +32,11 @@ class App extends Component {
         this._deleteTask = this._deleteTask.bind(this);
         this._saveTask = this._saveTask.bind(this);
         this._completeTask = this._completeTask.bind(this);
-
     }
     render() {
         return (
             <div>
-                <h1>React Todo List</h1>
+                <h1 className={classNames('title')}>React Todo List</h1>
                 <TodoAdd addTask={this._addTask}/>
                 <TodoList 
                     todos={this.state.todos}
