@@ -26,7 +26,7 @@ class TodoList extends Component {
     }
 
     _renderItems() {
-        const { todos, saveTask, deleteTask } = this.props;
+        const { todos, saveTask, deleteTask, completeTask } = this.props;
 
         let list = [];
         todos.forEach((todo, idx) => {
@@ -36,6 +36,7 @@ class TodoList extends Component {
                         todo={todo} 
                         saveTask={saveTask} 
                         deleteTask={deleteTask}
+                        completeTask={completeTask}
                         />)
         });
         return list;
@@ -46,6 +47,7 @@ TodoList.propTypes = {
     todos: PropTypes.array,
     saveTask: PropTypes.func,
     deleteTask: PropTypes.func,
+    completeTask: PropTypes.func,
 }
 
 export default TodoList;

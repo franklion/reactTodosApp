@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-
-
 class TodoItem extends Component {
 
     constructor(props) {
@@ -20,14 +18,22 @@ class TodoItem extends Component {
 
 
     render() {
-        const { todo, idx, deleteTask } = this.props;
+        const { todo, idx, deleteTask, completeTask } = this.props;
+        const taskStyle = {
+            color: todo.isCompleted ? '#888' : '#000',
+            textDecoration: todo.isCompleted ? 'line-through' : '',
+        };
+
         if(this.state.isEditing) {
             return (
                 <tr>
-                    <td><input type="text" data-idx={ idx } defaultValue={ todo.task } ref="editInput" /></td>
+                    <td>
+                        <input type="text" data-idx={ idx } defaultValue={ todo.task } ref="editInput" />
+                    </td>
                     <td>
                         <button onClick={this._onSaveClick}>Save</button>
                         <button onClick={this._onCancelClick}>Cancel</button>
+                        
                     </td>
                 </tr>
             )
@@ -35,11 +41,15 @@ class TodoItem extends Component {
 
         return (
             <tr>
-                <th>{ todo.task }</th>
-                <th>
+                <td>
+                    <span style={taskStyle} onClick={() => completeTask(idx)}>
+                        {todo.task}
+                    </span>
+                </td>
+                <td>
                     <button onClick={this._onEditClick}>Edit</button>
                     <button onClick={() => deleteTask(idx)}>Delete</button>
-                </th>
+                </td>
             </tr>
         )
        
@@ -65,6 +75,7 @@ TodoItem.propTypes = {
     todo: PropTypes.object,
     saveTask: PropTypes.func,
     deleteTask: PropTypes.func,
+    completeTask: PropTypes.func,
 }
 
 export default TodoItem;

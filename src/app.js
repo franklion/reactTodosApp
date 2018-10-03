@@ -28,6 +28,7 @@ class App extends Component {
         this._addTask = this._addTask.bind(this);
         this._deleteTask = this._deleteTask.bind(this);
         this._saveTask = this._saveTask.bind(this);
+        this._completeTask = this._completeTask.bind(this);
 
     }
     render() {
@@ -36,9 +37,10 @@ class App extends Component {
                 <h1>React Todo List</h1>
                 <TodoAdd addTask={this._addTask}/>
                 <TodoList 
-                    todos={this.state.todos} 
-                    saveTask={this._saveTask} 
-                    deleteTask={this._deleteTask}    
+                    todos={this.state.todos}
+                    saveTask={this._saveTask}
+                    deleteTask={this._deleteTask}
+                    completeTask={this._completeTask}
                     />
             </div>
         );
@@ -66,6 +68,12 @@ class App extends Component {
         let newTodos = [...this.state.todos];
         // copy object
         newTodos[idx] = Object.assign({}, newTodos[idx], { task: val });
+        this.setState({ todos: newTodos });
+    }
+
+    _completeTask(idx) {
+        let newTodos = [...this.state.todos];
+        newTodos[idx] = Object.assign({}, newTodos[idx], { isCompleted: !newTodos[idx].isCompleted });
         this.setState({ todos: newTodos });
     }
 }
