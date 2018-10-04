@@ -6,6 +6,7 @@ import TodoItem from './TodoItem';
 class TodoList extends Component {
     constructor(props) {
         super(props);
+        this._renderItems = this._renderItems.bind(this);
     }
     render() {
         return (
@@ -26,18 +27,23 @@ class TodoList extends Component {
     }
 
     _renderItems() {
-        const { todos, saveTask, deleteTask, completeTask } = this.props;
+        const { filter, todos, saveTask, deleteTask, completeTask } = this.props;
 
         let list = [];
         todos.forEach((todo, idx) => {
-            list.push(<TodoItem 
-                        key={idx} 
-                        idx={idx} 
-                        todo={todo} 
-                        saveTask={saveTask} 
+            if (filter === 'SHOW_ALL' ||
+                (filter === 'SHOW_COMPLETED' && todo.isCompleted) ||
+                (filter === 'SHOW_UNCOMPLETED' && !todo.isCompleted)) {
+                list.push(
+                    <TodoItem
+                        key={idx}
+                        idx={idx}
+                        todo={todo}
+                        saveTask={saveTask}
                         deleteTask={deleteTask}
                         completeTask={completeTask}
-                        />)
+                    />);
+            }
         });
         return list;
     }
