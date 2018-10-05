@@ -11,3 +11,9 @@ export function decreaseCounter() {
         type: types.DECREASE_COUNTER
     }
 }
+
+export function resetCounter() {
+    return {
+        type: types.RESET_COUNTER
+    }
+}

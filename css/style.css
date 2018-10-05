@@ -34,3 +34,7 @@ body {
 .filter {
     margin-bottom: 30px;
 }
+
+.warn {
+    color: red;
+}

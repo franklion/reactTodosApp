@@ -5,6 +5,8 @@ import classNames from 'classnames';
 
 import * as TodosActions from '../actions/todos';
 import FilterContainer from '../containers/FilterContainer';
+import CounterContainer from '../containers/CounterContainer';
+import BmiContainer from '../containers/BmiContainer';
 import TodoList from '../components/TodoList';
 import TodoAdd from '../components/TodoAdd';
 import '../../css/style.css';
@@ -24,6 +26,10 @@ class App extends Component {
                     deleteTask={todosActions.deleteTask}
                     completeTask={todosActions.toggleTask}
                 />
+                <hr />
+                <CounterContainer />
+                <hr />
+                <BmiContainer />
             </div>
         );
     }

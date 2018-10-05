@@ -7,3 +7,10 @@ export const SET_FILTER = 'SET_FILTER';
 
 export const INCREASE_COUNTER = 'INCREASE_COUNTER';
 export const DECREASE_COUNTER = 'DECREASE_COUNTER';
+export const RESET_COUNTER = 'RESET_COUNTER';
+
+export const CALC_BMI = 'CALC_BMI';
+export const RESET_BMI = 'RESET_BMI';
+
+export const TEST_BMI = 'TEST_BMI';
+
