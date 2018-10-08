@@ -6,7 +6,12 @@ import PropTypes from 'prop-types';
 import * as CounterActions from '../actions/counter';
 
 
-class App extends Component {
+class CounterContainer extends Component {
+
+    componentDidMount() {
+        this.props.counterActions.loadCounter();
+    }
+
     render() {
         const { counter, counterActions } = this.props;
         return (
@@ -32,13 +37,13 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-const CounterContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(App);
+// const CounterContainer = connect(
+//     mapStateToProps,
+//     mapDispatchToProps
+// )(App);
 
-App.propTypes = {
+CounterContainer.propTypes = {
     counter: PropTypes.object,
 }
 
-export default CounterContainer;
+export default connect(mapStateToProps,mapDispatchToProps)(CounterContainer);

@@ -1,4 +1,5 @@
 import * as types from '../constants/ActionTypes';
+import axios from 'axios';
 
 export function increaseCounter() {
     return {
@@ -17,3 +18,4 @@ export function resetCounter() {
         type: types.RESET_COUNTER
     }
 }
+

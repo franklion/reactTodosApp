@@ -11,8 +11,6 @@ export default function counter(state = {
             return Object.assign({}, state, { bmi: newBmi });
         case types.RESET_BMI:
             return Object.assign({}, state, { bmi: 0 });
-        case types.TEST_BMI:
-            return Object.assign({}, state, { data: action.data});
         default:
             return state;
     }
