@@ -8,7 +8,12 @@ export function loadUsers() {
         axios.get('https://jsonplaceholder.typicode.com/users')
             .then(res => res.data )
             .then(users => {
-                dispatch({ type: types.LOAD_USERS, users });
+                console.log(users)
+                const newUsers = users.map(user => {
+                    return { key: user.id, name: user.name, phone: user.phone ,email: user.email }
+                });
+                console.log(newUsers)
+                dispatch({ type: types.LOAD_USERS, users: newUsers });
             })
             .catch(err => console.log(err))
 

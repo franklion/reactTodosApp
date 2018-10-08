@@ -9,6 +9,7 @@ import TodoAppContainer from './containers/TodoAppContainer';
 import CounterContainer from './containers/CounterContainer';
 import UsersContainer from './containers/UsersContainer';
 
+import 'antd/dist/antd.css'
 
 let store = createStore(todoApp,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
