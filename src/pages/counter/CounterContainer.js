@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 // components
 import Counter from './components/Counter'
 
+// style
+import './style.css'
+
 const mapStateToProps = state => {
     return { counter: state.counter };
 };

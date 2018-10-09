@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-
-// style
-import '../style.css'
-
 class Counter extends Component {
     render() {
         const { counter, increaseCounter, decreaseCounter, resetCounter } = this.props;
