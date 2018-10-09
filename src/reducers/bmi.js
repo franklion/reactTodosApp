@@ -2,7 +2,6 @@ import * as types from '../constants/ActionTypes';
 
 export default function counter(state = {
     bmi: 0,
-    data: []
 }, action) {
     switch (action.type) {
         case types.CALC_BMI:
