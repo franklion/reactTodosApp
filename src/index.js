@@ -6,8 +6,8 @@ import thunk from 'redux-thunk';
 
 import todoApp from './reducers';
 // import TodoAppContainer from './containers/TodoAppContainer';
-// import UsersContainer from './containers/UsersContainer';
 
+import UserContainer from './pages/users/UserContainer'
 import BmiContainer from './pages/bmi/BmiContainer'
 import CounterContainer from './pages/counter/CounterContainer'
 
@@ -22,7 +22,7 @@ let store = createStore(todoApp,
 
 ReactDOM.render(
     <Provider store={store}>
-        <BmiContainer />
+        <UserContainer />
     </Provider>,
     document.getElementById('main')
 );
