@@ -13,7 +13,6 @@ class UsersContainer extends Component {
         super(props);
         
         this.state = {
-            localUsers: [],
             dataSource: [{
                 key: '1',
                 name: 'Mike',
@@ -48,37 +47,16 @@ class UsersContainer extends Component {
         this.props.usersActions.loadUsers();
     }
 
-    // componentDidUpdate(prevProps, prevState) {
-        // console.log(`prevProps:`, prevProps)
-        // console.log(`prevState:`, prevState)
-        // const nowUsers = this.state.localUsers;
-        // if (nowUsers !== xxx) {
-        //     this.setState({
-        //         localUsers: [{name: 'frank'}]
-        //     })
-        // }
-    // }
-
-    // componentWillReceiveProps(nextProps) {
-    //     const users = nextProps.users.users.map(item => {
-    //         return { key: item.id, name: item.name, phone: item.phone, email: item.email }
-    //     });
-    //     this.setState({
-    //         localUsers: users
-    //     })
-    // }
-
-
     render() {
         const { users } = this.props;
         return (
             <div>
                 <Layout>
-                    <Header className="header-font">Header</Header>
+                    
                     <Content>
                         <Table columns={this.state.columns} dataSource={users.users}  pagination={this.state.pagination}/>
                     </Content>
-                    <Footer>Footer</Footer>
+                    
                 </Layout>
             </div>
         );
