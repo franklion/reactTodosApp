@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import { BrowserRouter, Route, Link, HashRouter } from 'react-router-dom'
 
 import todoApp from './reducers';
 // import TodoAppContainer from './containers/TodoAppContainer';
@@ -21,8 +22,16 @@ let store = createStore(todoApp,
 
 
 ReactDOM.render(
-    <Provider store={store}>
-        <UserContainer />
-    </Provider>,
+    <BrowserRouter>
+        <HashRouter>
+            <Provider store={store}>
+                <section>
+                    <Route path="/bmi" component={ BmiContainer }/>
+                    <Route path="/counter" component={ CounterContainer } />
+                    <Route path="/users" component={ UserContainer }/>
+                </section> 
+            </Provider>
+        </HashRouter>
+      </BrowserRouter>,
     document.getElementById('main')
 );
