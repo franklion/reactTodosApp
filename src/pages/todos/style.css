@@ -1,0 +1,28 @@
+.todos-item {
+    margin-bottom: 30px;
+}
+
+.todos-item-text{
+    width: 200px;
+    display: inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.todos-item-add {
+    margin-left: 40px;
+}
+
+.todos-item-completed {
+    color: #888;
+    text-decoration: line-through;
+}
+
+.todos-filter {
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.btn-filter {
+    margin: 0 10px;
+}

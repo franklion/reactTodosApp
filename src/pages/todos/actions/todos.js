@@ -1,14 +1,13 @@
-import * as types from '../constants/ActionTypes';
+import * as types from '../../../constants/ActionTypes';
 
-// action creator
-export function addTask(task){
+export function addTask(task) {
     return {
         type: types.ADD_TASK,
         task
     };
 }
 
-export function editTask(idx, task){
+export function editTask(idx, task) {
     return {
         type: types.EDIT_TASK,
         idx,
@@ -28,4 +27,11 @@ export function toggleTask(idx){
         type: types.TOGGLE_TASK,
         idx
     };
+}
+
+export function filter(filter) {
+    return {
+        type: types.SET_FILTER,
+        filter
+    }
 }

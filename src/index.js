@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { BrowserRouter, Route, Link, HashRouter } from 'react-router-dom'
-
 import todoApp from './reducers';
-// import TodoAppContainer from './containers/TodoAppContainer';
 
+
+import TodosContainer from './pages/todos/TodosContainer'
 import UserContainer from './pages/users/UserContainer'
 import BmiContainer from './pages/bmi/BmiContainer'
 import CounterContainer from './pages/counter/CounterContainer'
@@ -28,7 +28,8 @@ ReactDOM.render(
                 <section>
                     <Route path="/bmi" component={ BmiContainer }/>
                     <Route path="/counter" component={ CounterContainer } />
-                    <Route path="/users" component={ UserContainer }/>
+                    <Route path="/users" component={ UserContainer } />
+                    <Route path="/todos" component={ TodosContainer }/>
                 </section> 
             </Provider>
         </HashRouter>
