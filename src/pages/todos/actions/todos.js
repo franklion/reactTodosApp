@@ -22,7 +22,7 @@ export function deleteTask(idx){
     }
 }
 
-export function toggleTask(idx){
+export function toggleTask(idx) {
     return {
         type: types.TOGGLE_TASK,
         idx

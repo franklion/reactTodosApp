@@ -29,7 +29,11 @@ class TodosItem extends Component {
 
         return (
             <div className="todos-item">
-                <li className={todoClass} onClick={ () => this.handleToggle(idx) }>{todo.task}</li>
+                <label>
+                    <input type="checkbox" name="isCompleted" checked={todo.isCompleted} onChange={ () => this.handleToggle(idx) } />
+                    <li className={todoClass}>{todo.task}</li>
+                </label>
+                
                 <button onClick={ () => this.handleEdit() }>edit</button>
                 <button onClick={ () => this.handleDelete(idx) }>delete</button>
             </div>

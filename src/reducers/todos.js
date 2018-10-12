@@ -15,7 +15,7 @@ const initialState = [
     {
         id          : generateRandomId(),
         task        : 'wash clothes',
-        isCompleted : false
+        isCompleted : true
     },
 ]
 export default function todos(state = initialState, action) {
@@ -42,8 +42,9 @@ export default function todos(state = initialState, action) {
             return state.map(todo => {
                 if (todo.id === action.idx) {
                     return Object.assign({}, todo, { isCompleted: !todo.isCompleted })
-                }
-                    return todo
+                } 
+                    
+                    return todo 
             })  
         default:
             return state
