@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Users extends Component {
     render() {
@@ -10,17 +10,17 @@ class Users extends Component {
                     {this.renderUsers()}
                 </ul>
             </div>
-        );
+        )
     }
 
     renderUsers() {
-        const { users } = this.props.users;
-        return users.map(user => <li key={ user.key }>{ user.name } - { user.email }</li>);
+        const { users } = this.props.users
+        return users.map(user => <li key={ user.key }>{ user.name } - { user.email }</li>)
     }
 }
 
 Users.propTypes = {
     users: PropTypes.object,
-};
+}
 
-export default Users;
+export default Users

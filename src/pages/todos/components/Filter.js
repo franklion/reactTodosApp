@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Filter extends Component {
     render() {
@@ -10,13 +10,13 @@ class Filter extends Component {
                 <button className="btn-filter" onClick={ () => setFilter('SHOW_COMPLETED') } disabled={ filter === 'SHOW_COMPLETED' }>Completed</button>
                 <button className="btn-filter" onClick={ () => setFilter('SHOW_UNCOMPLETED') } disabled={ filter === 'SHOW_UNCOMPLETED' }>Uncompleted</button>
             </div>
-        );
+        )
     }
 }
 
 Filter.propTypes = {
     filter: PropTypes.string,
     setFilter: PropTypes.func,
-};
+}
 
-export default Filter;
+export default Filter

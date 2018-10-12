@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class BmiInput extends Component {
     render() {
@@ -14,35 +14,35 @@ class BmiInput extends Component {
                 <button onClick={ () => this.handleCalcBmi() }>send</button>
                 <button onClick={ () => this.handleResetBmi() }>reset</button>    
             </div>
-        );
+        )
     }
 
     handleCalcBmi() {
-        const heightInputValue = parseInt(this.refs.heightInput.value);
-        const weightInputValue = parseInt(this.refs.weightInput.value);
+        const heightInputValue = parseInt(this.refs.heightInput.value)
+        const weightInputValue = parseInt(this.refs.weightInput.value)
 
         if (!this._isValidBmiInput(heightInputValue) ||
-            !this._isValidBmiInput(weightInputValue)) return false;
+            !this._isValidBmiInput(weightInputValue)) return false
         
-        this.props.calcBmi(heightInputValue, weightInputValue);
+        this.props.calcBmi(heightInputValue, weightInputValue)
     }
 
     handleResetBmi() {
-        const heightInput = this.refs.heightInput;
-        const weightInput = this.refs.weightInput;
-        heightInput.value = 0;
-        weightInput.value = 0;
-        this.props.resetBmi();
+        const heightInput = this.refs.heightInput
+        const weightInput = this.refs.weightInput
+        heightInput.value = 0
+        weightInput.value = 0
+        this.props.resetBmi()
     }
 
     _isValidBmiInput(input) {
-        const reg = /^[1-9]+[0-9]*$/;
-        return reg.test(input);
+        const reg = /^[1-9]+[0-9]*$/
+        return reg.test(input)
     }
 }
 
 BmiInput.propTypes = {
     bmi: PropTypes.object,
-};
+}
 
-export default BmiInput;
+export default BmiInput

@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes';
+import * as types from '../constants/ActionTypes'
 
 export default function counter(state = {
     counter: 0,
@@ -11,7 +11,7 @@ export default function counter(state = {
         case types.RESET_COUNTER:
             return Object.assign({}, state, { counter: 0 })
         default:
-            return state;
+            return state
     }
 }
 

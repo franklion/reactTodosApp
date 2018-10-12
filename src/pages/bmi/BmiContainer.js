@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { calcBmi, resetBmi } from './actions/bmi'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 // components
 import BmiResult from './components/BmiResult'
@@ -11,17 +11,17 @@ import BmiInput from './components/BmiInput'
 import './style.css'
 
 const mapStateToProps = state => {
-    return { bmi: state.bmi };
-};
+    return { bmi: state.bmi }
+}
 
 const mapDispatchToProps = dispatch => ({
     calcBmi: (height, weight) => dispatch(calcBmi(height, weight)),
     resetBmi: () => dispatch(resetBmi()),
-});
+})
 
 class BmiContainer extends Component {
     render() {
-        const { bmi, calcBmi, resetBmi } = this.props;
+        const { bmi, calcBmi, resetBmi } = this.props
         return (
             <div>
                 <h1>BmiContainer</h1>
@@ -33,7 +33,7 @@ class BmiContainer extends Component {
                     resetBmi={resetBmi}
                 />
             </div>
-        );
+        )
     }
 }
 
@@ -41,6 +41,6 @@ BmiContainer.propTypes = {
     bmi: PropTypes.object,
     calcBmi: PropTypes.func,
     resetBmi: PropTypes.func,
-};
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(BmiContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(BmiContainer)

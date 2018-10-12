@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Counter extends Component {
     render() {
-        const { counter, increaseCounter, decreaseCounter, resetCounter } = this.props;
+        const { counter, increaseCounter, decreaseCounter, resetCounter } = this.props
         return (
             <div>
                 <h2 className="title-counter">Counter: {counter.counter}</h2>
@@ -13,7 +13,7 @@ class Counter extends Component {
                     <button className="btn-counter-primary" onClick={ () => resetCounter() }>reset</button>
                 </div>     
             </div>
-        );
+        )
     }
 }
 
@@ -22,6 +22,6 @@ Counter.propTypes = {
     increaseCounter: PropTypes.func,
     decreaseCounter: PropTypes.func,
     resetCounter: PropTypes.func,
-};
+}
 
-export default Counter;
+export default Counter

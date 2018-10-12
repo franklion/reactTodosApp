@@ -26,3 +26,12 @@
 .btn-filter {
     margin: 0 10px;
 }
+
+.todos-keyword {
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.input-keyword {
+    margin-left: 40px;
+}

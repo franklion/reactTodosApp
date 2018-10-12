@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class TodosAdd extends Component {
     render() {
@@ -8,20 +8,20 @@ class TodosAdd extends Component {
                 <input className="todos-item-text" type="text" ref="addInput" />
                 <button onClick={ () => this.handleAdd() }>Create</button>
             </div>
-        );
+        )
     }
 
     handleAdd() {
-        const addInput = this.refs.addInput;
-        if (addInput.value === '') return;
+        const addInput = this.refs.addInput
+        if (addInput.value === '') return
 
-        this.props.addTask(addInput.value.trim());
-        addInput.value = '';        
+        this.props.addTask(addInput.value.trim())
+        addInput.value = ''        
     }
 }
 
 TodosAdd.propTypes = {
     addTask: PropTypes.func,
-};
+}
 
-export default TodosAdd;
+export default TodosAdd
