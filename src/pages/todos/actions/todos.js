@@ -35,3 +35,17 @@ export function filter(filter) {
         filter
     }
 }
+
+export function setKeyword(keyword) {
+    return {
+        type: types.SET_KEYWORD,
+        keyword
+    }
+}
+
+export function setFilter(filter) {
+    return {
+        type: types.SET_FILTER,
+        filter
+    }
+}

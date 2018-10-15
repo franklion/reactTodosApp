@@ -17,7 +17,7 @@ class Keyword extends Component {
 }
 
 Keyword.propTypes = {
-
+    setKeyword: PropTypes.func,
 }
 
 export default Keyword

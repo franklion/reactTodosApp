@@ -71,7 +71,7 @@ class TodosItem extends Component {
 
 TodosItem.propTypes = {
     idx: PropTypes.string,
-    todos: PropTypes.object,
+    todo: PropTypes.object,
     editTask: PropTypes.func,
     deleteTask: PropTypes.func,
     toggleTask: PropTypes.func,

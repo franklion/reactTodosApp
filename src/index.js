@@ -13,7 +13,7 @@ import BmiContainer from './pages/bmi/BmiContainer'
 import CounterContainer from './pages/counter/CounterContainer'
 
 import 'antd/dist/antd.css'
-import './public/css/style.css'
+import '../public/css/style.css'
 
 
 let store = createStore(todoApp,
