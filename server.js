@@ -14,7 +14,7 @@ webpackConfig.entry = [
 webpackConfig.output = {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: 'http://localhost:3000/'
+    publicPath: 'http://localhost:3080/'
 };
 
 // express
@@ -34,10 +34,10 @@ app.get('*', function(req, res) {
 });
 
 // listen port
-app.listen(3000, function(error) {
+app.listen(3080, function(error) {
     if (error) {
         console.error(error);
     } else {
-        console.info('==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.', 3000, 3000);
+        console.info('==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.', 3080, 3080);
     }
 });
