@@ -2,12 +2,19 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { increaseCounter, decreaseCounter, resetCounter } from './actions/counter'
 import PropTypes from 'prop-types'
+import styled from 'styled-components';
 
 // components
 import Counter from './components/Counter'
 
 // style
 import './style.css'
+
+
+const Title = styled.h1`
+    font-size: 2rem;
+    color: pink;
+`;
 
 const mapStateToProps = state => {
     return { counter: state.counter }
@@ -24,7 +31,7 @@ class CounterContainer extends Component {
         const { counter, increaseCounter, decreaseCounter, resetCounter } = this.props
         return (
             <div>
-                <h1>CounterContainer</h1>
+                <Title>CounterContainer</Title>
                 <Counter
                     counter={counter}
                     increaseCounter={increaseCounter}
