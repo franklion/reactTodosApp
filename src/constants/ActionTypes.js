@@ -20,4 +20,9 @@ export const CALC_BMI  = 'CALC_BMI'
 export const RESET_BMI = 'RESET_BMI'
 
 // users
-export const LOAD_USERS = 'LOAD_USERS'
+export const LOAD_USERS         = 'LOAD_USERS'
+export const LOAD_USERS_SUCCESS = 'LOAD_USERS_SUCCESS'
+export const LOAD_USERS_ERROR   = 'LOAD_USERS_ERROR'
+
+export const LOAD_USERS2        = 'LOAD_USERS2'
+export const IS_LOADING_USERS   = 'IS_LOADING_USERS'
